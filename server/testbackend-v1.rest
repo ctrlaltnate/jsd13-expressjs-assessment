@@ -1,6 +1,6 @@
 @baseUrl = http://localhost:3001/api/v1/products
 
-@id = 11
+@id = {{createProduct.response.body.$.id}}
 
 ### read all products
 GET {{baseUrl}}
@@ -13,6 +13,7 @@ GET {{baseUrl}}/{{id}}
 GET {{baseUrl}}?search=iphone
 
 ### CREATE a new product
+# @name createProduct
 POST {{baseUrl}}
 Content-Type: application/json
 

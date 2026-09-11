@@ -42,13 +42,8 @@ router.post("/", (req, res) => {
     });
   }
 
-  const highestId = products.reduce(
-    (max, product) => Math.max(max, Number(product.id)),
-    0,
-  );
-
   const newProduct = {
-    id: String(highestId + 1),
+    id: String(Date.now()),
     name,
     price,
     quantity,
@@ -90,7 +85,7 @@ router.delete("/:id", (req, res, next) => {
     const product = products.find((p) => p.id === req.params.id);
 
     if (!product) {
-      return res.status(404).json({ error: "Product not found!" });
+      return res.status(404).json({ error: "Product not found, don't know what to delete!" });
     }
 
     const index = products.indexOf(product);
