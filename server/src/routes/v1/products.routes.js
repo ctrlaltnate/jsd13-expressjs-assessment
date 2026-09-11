@@ -4,9 +4,17 @@ import {products} from "../../productsDB/products.js";
 
 const router = express.Router();
 
-// READ products --all--
+// READ products --all-- with query integreted
 router.get("/", (req, res) => {
-  res.json(products);
+  const { search } = req.query;
+
+  const result = search
+    ? products.filter((product) =>
+        product.name.toLowerCase().includes(search.toLowerCase())
+      )
+    : products;
+
+  return res.status(200).json(result);
 });
 
 
@@ -23,18 +31,7 @@ router.get("/:id", (req, res, next) => {
   }
 });
 
-// Query Product by name
-router.get("/", (req, res) => {
-  const { search } = req.query;
 
-  const result = search
-    ? products.filter((product) =>
-        product.name.toLowerCase().includes(search.toLowerCase())
-      )
-    : products;
-
-  res.status(200).json(result);
-});
 
 // create products
 router.post("/", (req, res) => {
