@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:3001/api/v1/products
+
+@id = 11
+
+### read all products
+GET {{baseUrl}}
+
+### read product from ID
+GET {{baseUrl}}/{{id}}
+
+### CREATE a new product
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "AirPods 5",
+  "price": 4990,
+  "quantity": 55
+}
