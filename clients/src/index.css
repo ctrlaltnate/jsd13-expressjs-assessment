@@ -1,32 +1,147 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap");
 
-* { box-sizing: border-box; }
-body { margin: 0; font-family: "Google Sans", Arial, sans-serif; color: #203528; background: #f1f8f2; }
-button, input { font: inherit; }
-button { cursor: pointer; }
-.page-shell { max-width: 1000px; margin: auto; padding: 32px 16px; }
-.hero { padding: 24px; color: white; background: #198754; border-radius: 12px; }
-.hero h1 { margin: 0 0 6px; }
-.subtitle { margin: 0; }
-.product-count { margin-top: 16px; }
-.product-count strong { margin-right: 6px; font-size: 24px; }
-.form-card, .list-card { margin-top: 20px; padding: 20px; background: white; border-radius: 12px; }
-h2 { margin-top: 0; }
-.product-form, .search-form { display: flex; flex-wrap: wrap; gap: 8px; }
-input { flex: 1; min-width: 150px; padding: 10px; border: 1px solid #b8cdbd; border-radius: 6px; }
-button { padding: 10px 14px; border: 0; border-radius: 6px; color: white; background: #198754; }
-button:hover { background: #146c43; }
-.secondary-button, .actions button { color: #198754; background: #e1f1e5; }
-.delete-button { margin-left: 6px; color: #b42318 !important; background: #fde8e7 !important; }
-.list-heading { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-.search-form { max-width: 320px; align-self: end; flex-wrap: nowrap; }
-.search-form input { min-width: 0; }
-.error-message { padding: 10px; color: #b42318; background: #fde8e7; border-radius: 6px; }
-.state-message { text-align: center; color: #637568; }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 12px 8px; border-bottom: 1px solid #e5eee7; text-align: left; }
-th { color: #42604d; background: #eef7ef; }
-td small { display: block; color: #84988a; font-size: 11px; }
-.quantity { color: #198754; font-weight: bold; }
-@media (max-width: 650px) { .list-heading { display: block; } .search-form { max-width: none; margin-top: 12px; } .product-form input { min-width: 100%; } }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Google Sans", Arial, sans-serif;
+  color: #203528;
+  background: #f1f8f2;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.page-shell {
+  max-width: 1000px;
+  margin: auto;
+  padding: 32px 16px;
+}
+.hero {
+  padding: 24px;
+  color: white;
+  background: #198754;
+  border-radius: 12px;
+}
+.hero h1 {
+  margin: 0 0 6px;
+}
+.subtitle {
+  margin: 0;
+}
+.product-count {
+  margin-top: 16px;
+}
+.product-count strong {
+  margin-right: 6px;
+  font-size: 24px;
+}
+.form-card,
+.list-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+h2 {
+  margin-top: 0;
+}
+.product-form,
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+input {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #b8cdbd;
+  border-radius: 6px;
+}
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: #198754;
+}
+button:hover {
+  background: #146c43;
+}
+.secondary-button,
+.actions button {
+  color: #198754;
+  background: #e1f1e5;
+}
+.delete-button {
+  margin-left: 6px;
+  color: #b42318 !important;
+  background: #fde8e7 !important;
+}
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.search-form {
+  max-width: 320px;
+  align-self: end;
+  flex-wrap: nowrap;
+}
+.search-form input {
+  min-width: 0;
+}
+.error-message {
+  padding: 10px;
+  color: #b42318;
+  background: #fde8e7;
+  border-radius: 6px;
+}
+.state-message {
+  text-align: center;
+  color: #637568;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e5eee7;
+  text-align: left;
+}
+th {
+  color: #42604d;
+  background: #eef7ef;
+}
+td small {
+  display: block;
+  color: #84988a;
+  font-size: 11px;
+}
+.quantity {
+  color: #198754;
+  font-weight: bold;
+}
+@media (max-width: 650px) {
+  .list-heading {
+    display: block;
+  }
+  .search-form {
+    max-width: none;
+    margin-top: 12px;
+  }
+  .product-form input {
+    min-width: 100%;
+  }
+}
