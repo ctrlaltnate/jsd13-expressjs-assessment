@@ -1,6 +1,7 @@
 import express from "express";
 import mainRouter from "./routes/index.js";
 import v1Router from "./routes/v1/index.js";
+import cors from "cors";
 
 const app = express();
 
@@ -20,6 +21,9 @@ async function startServer() {
 app.use(express.json());
 app.use("/", mainRouter);
 app.use("/api/v1", v1Router)
+
+app.use(cors()); // เปิด CORS หาก React อยู่คนละ port เพื่อเชื่มกันได้
+app.use(express.json());
 
 // Centralize error handling middleware
 app.use((err, req, res, next) => {

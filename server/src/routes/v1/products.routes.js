@@ -23,10 +23,22 @@ router.get("/:id", (req, res, next) => {
   }
 });
 
+// Query Product by name
+router.get("/", (req, res) => {
+  const { search } = req.query;
+
+  const result = search
+    ? products.filter((product) =>
+        product.name.toLowerCase().includes(search.toLowerCase())
+      )
+    : products;
+
+  res.status(200).json(result);
+});
 
 // create products
 router.post("/", (req, res) => {
-  const {name, price, quantity} = req.body;
+  const {name, price, quantity = 1} = req.body; // quantity  default 1 
   if ( !name || !price ||!quantity) {
     return res.status(400).json({
       error: "Missing required fields, Please provide name , price and qunatities",

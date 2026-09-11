@@ -8,6 +8,10 @@ GET {{baseUrl}}
 ### read product from ID
 GET {{baseUrl}}/{{id}}
 
+
+### search from query way
+GET {{baseUrl}}?search=iphone
+
 ### CREATE a new product
 POST {{baseUrl}}
 Content-Type: application/json
@@ -17,3 +21,18 @@ Content-Type: application/json
   "price": 4990,
   "quantity": 55
 }
+
+
+### UPDATE a product info data
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+  "name": "AirPods 5 ANC",
+  "price": 5290,
+  "quantity": 60
+}
+
+
+### DELETE a product
+DELETE {{baseUrl}}/{{id}}
